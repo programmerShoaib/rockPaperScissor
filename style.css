@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+body {
+    background-color: #fCfCfC;
+}
+h1 {
+    text-align: center;
+    margin-top: 20px;
+}
+.choices {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.choice {
+    margin: 0 10px;
+    cursor: pointer;
+}
+.choice img {
+    width: 200px;
+    height: 200px;
+}
+.scoreBoard {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    font-size: large;
+    text-align: center;
+}
+.player, .comp {
+    margin: 0 10px;
+}
+.msgbox {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    font-size: x-large;
+    text-align: center;
+}
+
