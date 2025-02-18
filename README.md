@@ -1,0 +1,2 @@
+# rockPaperScissor
+simple js game 
