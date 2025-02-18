@@ -11,18 +11,36 @@
         })
     });
 
-    const playGame = (playerChoice) => {                                   // this function get the player choice
+    const playGame = (playerChoice) => {                                // this function get the player choice
         console.log("this is player choice " , playerChoice);
         const computerChoice = computerChoiceFunc();
         console.log("this is computer choice " , computerChoice);
-        // decideWin(playerChoice, computerChoice);
+        decideWin(playerChoice, computerChoice);
     }
 
-    const computerChoiceFunc = () => {                       
+    const computerChoiceFunc = () => {                                  // this function get the computer choice             
         const options = ['rock', 'paper', 'scissor'];                   
         const randIdx = Math.floor(Math.random() * 3);                
         return options[randIdx];
     }
 
-
-   
+    const decideWin = (playerChoice, computerChoice) => {
+        let playerWin = true;                                          // player value is false initially
+        if (playerChoice === computerChoice) {                          // if the player choice is equal to the computer choice
+            console.log("it's a tie");
+            // gameDraw();
+        } else {
+            if (playerChoice === 'rock') {                              // if the player choice is rock
+                playerWin = computerChoice === 'scissor' ? true : false;
+                console.log(playerWin);
+            } else if (playerChoice === 'paper') {
+                playerWin = computerChoice === 'rock' ? true : false;
+                console.log(playerWin);
+            } else if (playerChoice === 'scissor') {
+                playerWin = computerChoice === 'paper' ? true : false;
+                console.log(playerWin);
+            }else {
+                console.log("something went wrong");
+            }
+        }
+    }
